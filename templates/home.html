@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>RedFlair</title>
-</head>
-<body>
-	<h1 align="center">Reddit Flair Detector</h1>
+{%extends "layout.html" %}
+{%block content%}
+	<h1 align="center">Reddit Flair Predictor</h1>
 	<h2 align="center">Flair Predictions for Subreddit India</h2><br><br>
-	<center>
-		<form action = "/predicting_output.ipynb" method = "POST" target = "_blank">Enter the URL:&nbsp&nbsp<input type="text" name="url" size="140"><br> <br>
-			<input type="Submit" name="submit" value="Submit"></form>
+	
+	<div class="content-section">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }}
+			<fieldset class = "form-group">
 
-	</center>
+				<div class="form-group">
+					{{ form.url.label(class="form-control-label")}}
+					{{ form.url(class="form-control form-control-lg")}}					
+				</div>
+				
+			</fieldset>
+			<div class="form-group">
+				{{ form.submit(class = "btn btn-outline-info")}}
+			</div>
+		</form>
+		
+	</div>
 
-	<!-- <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <script>
-    	function goPython() {
-    		$.ajax({
-              url: "predicting_output.ipynb",
-             context: document.body
-            }).done(function() {
-             alert('finished python script');;
-            });
-    	}
-    </script> -->
-</body>
-</html>
+{%endblock content%}
