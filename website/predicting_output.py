@@ -33,11 +33,11 @@ def process_strings(sample):
 
 def get_input(url_to_check):
     
-    reddit = praw.Reddit(client_id = 'cqzK0_e-iFTe3Q',
-                        client_secret = 'alWsGXWCpkb-SAt72IR98Nh7uSg',
-                        user_agent = 'RedFlair',
-                        username = 'SmartyVibhu',
-                        password = 'vibhu@14')
+    reddit = praw.Reddit(client_id = '#',
+                        client_secret = '#',
+                        user_agent = '#',
+                        username = '#',
+                        password = '#')
 
     post = reddit.submission(url = url_to_check)
     title_c = process_strings(str(post.title))
