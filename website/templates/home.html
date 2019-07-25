@@ -1,0 +1,24 @@
+{%extends "layout.html" %}
+{%block content%}
+	<h1 align="center">Reddit Flair Predictor</h1>
+	<h2 align="center">Flair Predictions for Subreddit India</h2><br><br>
+	
+	<div class="content-section">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }}
+			<fieldset class = "form-group">
+
+				<div class="form-group">
+					{{ form.url.label(class="form-control-label")}}
+					{{ form.url(class="form-control form-control-lg")}}					
+				</div>
+				
+			</fieldset>
+			<div class="form-group">
+				{{ form.submit(class = "btn btn-outline-info")}}
+			</div>
+		</form>
+		
+	</div>
+
+{%endblock content%}
