@@ -17,11 +17,11 @@ def initialising_mongo():
 
 def reddit_instance():
 
-	initial_red_instance = praw.Reddit(client_id = 'cqzK0_e-iFTe3Q', \
-										client_secret = 'alWsGXWCpkb-SAt72IR98Nh7uSg',\
-										user_agent = 'RedFlair',\
-										username = 'SmartyVibhu',\
-										password = 'vibhu@14')
+	initial_red_instance = praw.Reddit(client_id = '#', \
+										client_secret = '#',\
+										user_agent = '#',\
+										username = '#',\
+										password = '#')
 
 	sub_instance = initial_red_instance.subreddit('india')
 
